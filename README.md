@@ -25,7 +25,7 @@ This project provides a "Coming Soon" page that informs users about the brand's 
 
 ## Live Demo
 
-You can view a live demo of this project [here](#).
+You can view a live demo of this project [here](https://wadiaz-online.github.io/coming-soon-page-challenge/).
 
 ## Technologies Used
 - HTML5
@@ -33,7 +33,7 @@ You can view a live demo of this project [here](#).
   - Flexbox for layout
   - Media queries for responsiveness
 - JavaScript (for form validation)
-- [Frontend Mentor](https://www.frontendmentor.io) design template
+- [Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0/hub) design template
 
 ## Setup
 
@@ -41,4 +41,4 @@ To run this project locally, follow these steps:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/base-apparel-coming-soon.git
+   git clone https://github.com/wadiaz-online/coming-soon-page-challenge.git
