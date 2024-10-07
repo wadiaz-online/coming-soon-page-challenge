@@ -2,102 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Base Apparel Coming Soon Challenge Page</title>
   
-  <title>Base Apparel coming soon page Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-	/* General reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Setting up body font and base styles */
-body {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 16px;
-  background-color: hsl(0, 0%, 98%);
-  color: hsl(0, 36%, 70%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
+    /* Global Styles */
+    body {
+      font-family: 'Libre Franklin', sans-serif;
+      background-color: hsl(0, 0%, 98%);
+      color: hsl(0, 36%, 70%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-/* Container to center everything */
-.container {
-  max-width: 600px;
-  text-align: center;
-}
+    /* Container */
+    .container {
+      max-width: 600px;
+      text-align: center;
+    }
 
-/* Header or Logo */
-.logo {
-  margin-bottom: 20px;
-}
+    /* Logo */
+    .logo {
+      margin-bottom: 20px;
+    }
 
-/* Main Heading */
-h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: hsl(0, 6%, 24%);
-  margin-bottom: 20px;
-}
+    /* Heading */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: hsl(0, 6%, 24%);
+      margin-bottom: 20px;
+    }
 
-/* Subheading */
-p {
-  margin-bottom: 30px;
-}
+    /* Subheading */
+    p {
+      margin-bottom: 30px;
+    }
 
-/* Email form */
-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid hsl(0, 36%, 70%);
-  border-radius: 30px;
-  overflow: hidden;
-}
+    /* Form Styles */
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid hsl(0, 36%, 70%);
+      border-radius: 30px;
+      overflow: hidden;
+    }
 
-input[type="email"] {
-  border: none;
-  outline: none;
-  padding: 15px 20px;
-  font-size: 1rem;
-  flex-grow: 1;
-}
+    input[type="email"] {
+      border: none;
+      outline: none;
+      padding: 15px 20px;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
 
-input[type="email"]::placeholder {
-  color: hsl(0, 36%, 70%);
-}
+    input[type="email"]::placeholder {
+      color: hsl(0, 36%, 70%);
+    }
 
-button {
-  background-color: hsl(0, 36%, 70%);
-  border: none;
-  padding: 15px 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    button {
+      background-color: hsl(0, 36%, 70%);
+      border: none;
+      padding: 15px 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-button:hover {
-  background-color: hsl(0, 80%, 86%);
-}
+    button:hover {
+      background-color: hsl(0, 80%, 86%);
+    }
 
-/* Error message */
-.error-message {
-  color: hsl(0, 93%, 68%);
-  font-size: 0.9rem;
-  margin-top: 10px;
-  display: none; /* Show only on validation error */
-}
-/* Footer styles */
+    /* Error message */
+    .error-message {
+      color: hsl(0, 93%, 68%);
+      font-size: 0.9rem;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px 0;
@@ -113,55 +108,33 @@ button:hover {
       color: hsl(228, 45%, 44%);
     }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
 
-  form {
-    flex-direction: column;
-  }
+      form {
+        flex-direction: column;
+      }
 
-  input[type="email"] {
-    padding: 10px;
-  }
+      input[type="email"] {
+        padding: 10px;
+      }
 
-  button {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
   </style>
-  <script>
-  document.getElementById('emailForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const emailInput = document.getElementById('email');
-  const errorMessage = document.getElementById('error');
-
-  const emailValue = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
-
-  if (!emailValue || !emailPattern.test(emailValue)) {
-    errorMessage.style.display = 'block';
-    emailInput.classList.add('error'); // Optionally add a class to highlight the error
-  } else {
-    errorMessage.style.display = 'none';
-    emailInput.classList.remove('error');
-    // Submit form or show a success message
-  }
-});
-
-  </script>
 </head>
 <body>
 
-  <div class="container">
+  <main class="container">
     <!-- Logo -->
     <div class="logo">
-      <img src="images/logo.svg" alt="Base Apparel">
+      <img src="images/logo.svg" alt="Base Apparel Logo">
     </div>
 
     <!-- Heading -->
@@ -171,28 +144,51 @@ button:hover {
     <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
     <!-- Email Form -->
-    <form id="emailForm">
-      <input type="email" id="email" placeholder="Email Address" required>
-      <button type="submit">
+    <form id="emailForm" aria-label="Sign up for email updates">
+      <input type="email" id="email" placeholder="Email Address" aria-label="Email Address" >
+      <button type="submit" aria-label="Submit email">
         <img src="images/icon-arrow.svg" alt="Submit">
       </button>
     </form>
 
     <!-- Error Message -->
     <p class="error-message" id="error">Please provide a valid email</p>
-  </div>
+  </main>
 
   <!-- Right Side Image -->
   <div class="image-container">
     <img src="images/hero-desktop.jpg" alt="Base Apparel Hero Image">
   </div>
-  
-  
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Wadia Alfred</a>.
     </p>
   </footer>
+
+  <!-- JavaScript for form validation -->
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const emailInput = document.getElementById('email');
+      const errorMessage = document.getElementById('error');
+
+      const emailValue = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
+
+      if (!emailValue || !emailPattern.test(emailValue)) {
+        errorMessage.style.display = 'block';
+        emailInput.classList.add('error');
+      } else {
+        errorMessage.style.display = 'none';
+        emailInput.classList.remove('error');
+        alert("Thank you for subscribing!");
+        // Optionally handle form submission here
+      }
+    });
+  </script>
+
 </body>
 </html>
